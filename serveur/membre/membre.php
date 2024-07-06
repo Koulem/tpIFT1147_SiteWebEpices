@@ -100,7 +100,7 @@ if (!isset($_SESSION['role'])) {
                                 <img src="../photos/avatar_membre.png">
                                 echo '<img src="../photos/'.$fetch['photo'].' ">';
                                 -->
-                                <?php echo $_SESSION['prenom'] . ", " . $_SESSION['nom'] . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='includes/imgMembre/" . $_SESSION['photo'] . "' width=48 height=48>";?>
+                                <?php echo $_SESSION['prenom'] . ", " . $_SESSION['nom'] . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='includes/imgMembre/" . $_SESSION['photo'] . "'width=48 height=48>";?>
                             </a>
                             <span class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle-fade" data-bs-toggle="dropdown" id="dropdown"></a>
