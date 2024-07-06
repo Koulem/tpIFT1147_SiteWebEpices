@@ -97,11 +97,11 @@ function chargerPhoto($nom, $prenom){
         while($reponse->num_rows > 0) {
             $fetch[] = mysqli_fetch_assoc($reponse);
 
-            $photo = $fetch[1];
+            $_SESSION['photo']= $fetch[1];
         }
     
     }
-    return $photo;
+    return $_SESSION['photo'];
     
 }
 

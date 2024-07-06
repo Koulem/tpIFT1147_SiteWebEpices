@@ -51,7 +51,7 @@ if (!isset($_SESSION['role'])) {
 
     <!-- Navbar start -->
     <div class="container-fluid fixed-top">
-        
+
         <div class="container topbar bg-primary d-none d-lg-block">
             <div class="d-flex justify-content-between">
                 <div class="top-info ps-2">
@@ -100,7 +100,7 @@ if (!isset($_SESSION['role'])) {
                                 <img src="../photos/avatar_membre.png">
                                 echo '<img src="../photos/'.$fetch['photo'].' ">';
                                 -->
-                                <?php echo $_SESSION['prenom'] . ", " . $_SESSION['nom'] . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='includes/imgMembre/" . $_SESSION['photo'] . "'width=48 height=48>";?>
+                                <?php echo $_SESSION['prenom'] . ", " . $_SESSION['nom'] . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='includes/imgMembre/" . $_SESSION['photo'] . "'width=48 height=48>"; ?>
                             </a>
                             <span class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle-fade" data-bs-toggle="dropdown" id="dropdown"></a>
@@ -162,7 +162,7 @@ if (!isset($_SESSION['role'])) {
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <img src="../../img/vegetable-item-6.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                <img src="../../client/public/img/vegetable-item-6.jpg" class="img-fluid rounded-circle w-100" alt="">
                             </div>
                             <div class="col-6">
                                 <a href="#" class="h5">Persil Organique</a>
@@ -183,7 +183,8 @@ if (!isset($_SESSION['role'])) {
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <img src="../../img/vegetable-item-4.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            
+                                <img src="../../client/public/img/vegetable-item-4.jpg" class="img-fluid rounded-circle w-100" alt="">
                             </div>
                             <div class="col-6">
                                 <a href="#" class="h5">Poivron Organique</a>
@@ -375,7 +376,8 @@ if (!isset($_SESSION['role'])) {
     <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Section Jscript/  Template Javascript btn_deconnect fa-user_icon-->
-    <script src="../../js/main.js"></script>
+    ../../js/main.js"
+    <script src="../../client/membre/"></script>
 
     <!--
     <script>
