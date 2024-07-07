@@ -377,7 +377,7 @@ if (!isset($_SESSION['role'])) {
 
     <!-- Section Jscript/  Template Javascript btn_deconnect fa-user_icon-->
     ../../js/main.js"
-    <script src="../../client/membre/"></script>
+    <script src="../../js/main.js"></script>
 
     <!--
     <script>

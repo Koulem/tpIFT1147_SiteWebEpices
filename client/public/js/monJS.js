@@ -1,4 +1,4 @@
-
+let contenu;
 let deconnecter = () => {
     //fetch('serveur/pages/deconnecter.php').then(alert("FINI"));
     document.getElementById('formDec').submit();//'dc'
@@ -26,21 +26,6 @@ function rendreInvisible(elem){
 function lister(){
 	document.getElementById('formLister').submit();
 }
-/*
-//--Fonction ajouter mon ajout
-
-function ajouterEpice()
-{
-	document.getElementById('ide').value=uneEpice.ide;
-	document.getElementById('nom').value=uneEpice.nom;
-	document.getElementById('types').value=uneEpice.types;
-	document.getElementById('prix').value=uneEpice.prix;
-	document.getElementById('vendeur').value=uneEpice.vendeur;
-	document.getElementById('images_aj').value=uneEpice.images;
-	document.getElementById('descr_aj').value=uneEpice.description;
-	$('#modalAjouterEpices').modal('show');
-}
-*/
 
 function validerNum(elem){
 	var num=document.getElementById(elem).value;
@@ -74,16 +59,15 @@ function editerUneEpice(uneEpice){
 }
 
 let ideEpiceSupprimer;
-
 function supprimerEpice(ide){
 	ideEpiceSupprimer = ide;
 	$('#modalSupprimerEpices').modal('show');
 }
 
 function supprimer(){
-     let formEnlever = document.getElementById('formEnlever');
-	 document.getElementById('idar').value = ideEpiceSupprimer;
-	 formEnlever.submit();
+  let formEnlever = document.getElementById('formEnlever');
+	document.getElementById('idar').value = ideEpiceSupprimer;
+	formEnlever.submit();
 }
 
 function enleverMultiplesEpices(){                  
@@ -176,7 +160,7 @@ function generate_table() {
 				<td>${uneEpice.types}</td>
 				<td>${uneEpice.prix}</td>
 				<td>${uneEpice.vendeur}$</td>
-				<td><img class='img-fluid'  width='60' height='60' src='../../photos/${uneEpice.images}'></td>
+				<td><img class='img-fluid'  width='60' height='60' src='../../serveur/photos/${uneEpice.images}'></td>
 				<td>${uneEpice.descriptions}</td>
 				
 				<td>
@@ -191,15 +175,15 @@ function generate_table() {
 }	
 
 function apply_pagination() {
-    $pagination.twbsPagination({
-          totalPages: totalPages,
-          visiblePages: 6,
-          onPageClick: function (event, page) {
-                displayRecordsIndex = Math.max(page - 1, 0) * recPerPage;
-                endRec = (displayRecordsIndex) + recPerPage;
-               
-                displayRecords = records.slice(displayRecordsIndex, endRec);
-                generate_table();
-          }
-    });
+	$pagination.twbsPagination({
+				totalPages: totalPages,
+				visiblePages: 6,
+				onPageClick: function (event, page) {
+							displayRecordsIndex = Math.max(page - 1, 0) * recPerPage;
+							endRec = (displayRecordsIndex) + recPerPage;
+							
+							displayRecords = records.slice(displayRecordsIndex, endRec);
+							generate_table();
+				}
+	});
 }

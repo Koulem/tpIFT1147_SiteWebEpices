@@ -41,7 +41,6 @@ if (!isset($_SESSION['role'])) {
     <link href="../../client/public/css/style.css" rel="stylesheet">
 
 </head>
-
 <body onLoad='initialiser(<?php echo "\"" . $msg . "\""; ?>); chargerEpices("A","../gestionEpice/listerEpice.php");'>
     <?php require_once("./menu_admin.inc.php"); ?>
 
@@ -537,6 +536,7 @@ if (!isset($_SESSION['role'])) {
     <script src="../../lib/easing/easing.min.js"></script>
     <script src="../../client/public/js/monJS.js"></script>
     <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../client/public/js/requetes.js"></script>
     <script src="../../lib/lightbox/js/lightbox.min.js"></script>
     <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
 

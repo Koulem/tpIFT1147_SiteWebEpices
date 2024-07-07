@@ -57,9 +57,11 @@ let listerCategoriesForm = () => {
 //allerURL contient le url où se trouve le fichier liste.php
 //Provenance si l'Appel provient de index.php ou membres.php
 //imagesURL selon la provenance contiendra le bon chemin où se trouve les images des articles
+
 let chargerEpices = (provenance, allerURL) => {
+    //allerURL ="./serveur/gestionEpice/listerEpice.php";
     provenanceAppel = provenance;
-    imagesURL = (provenance == 'A') ? "serveur/photos/" : "../../photos/";
+    imagesURL = (provenance == 'I') ? "serveur/photos/" : "../photos/";
     $.ajax({
         type: 'POST',
         url: allerURL,
@@ -68,7 +70,7 @@ let chargerEpices = (provenance, allerURL) => {
             if (reponse.OK) {
                 listeEpices = reponse.listeEpices;
                 listeCategories = reponse.categories;
-                if(provenance == "A" || provenance == "M"){
+                if(provenance == "I" || provenance == "M"){
                     listerCategories();
                     listerEpices();
                 }else {// A-Admmin
